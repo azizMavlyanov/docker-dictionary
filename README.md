@@ -15,4 +15,4 @@ sudo docker-compose up -d --build --force-recreate
 ```
 2\) Visit http://localhost:8085/ and start using the dictionary
 
-**MongoDB database is persistent** since data located in volume.
+**PostgreSQL database is persistent** since data located in volume.
