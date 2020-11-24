@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Dictionary</title>
+    <style>
+        .main {
+            width: 50%;
+            margin: 50px auto;
+        }
+
+        .word_title {
+            margin-top: 40px;
+        }
+
+        #word_not_found {
+            display: none;
+        }
+
+        #word_not_found_title, #word_input, #word_desc, #word_btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="input-group">
+            <input type="text" class="form-control" id="search_input" placeholder="Введите слово">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" id="search" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <hr>
+        <div id="word_not_found">
+            <h3 class="word_title" id="word_not_found_title">Ничего не найдено</h3>
+            <hr>
+            <h4 class="word_title">Хотите добавить новое слово?</h4>
+            <p id="word_warning"></p>
+            <input type="text" class="form-control" id="word_input" placeholder="Введите слово">
+            <textarea class="form-control" placeholder="Введите описание" id="word_desc"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-secondary" id="word_btn" type="button">
+                    Добавить слово
+                </button>
+            </div>
+        </div>
+        <div id="word_block">
+            <h3 class="word_title" id="word_title"></h3>
+            <p class="text-muted word_description" id="word_description"></p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

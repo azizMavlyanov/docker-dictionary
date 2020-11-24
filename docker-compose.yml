@@ -1,0 +1,33 @@
+version: "3"
+services:
+  dictionaryserver:
+    image: brendanburns/dictionary-server
+    restart: on-failure
+    ports:
+      - 8080:8080
+  postgres:
+    image: library/postgres:13
+    container_name: postgres
+    restart: on-failure
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: dictionary
+    volumes:
+      - './db-data:/var/lib/postgresql/data'
+    ports:
+      - 5432:5432
+  dictionary:
+    image: azizmavlyanov/dictionary
+    restart: on-failure
+    ports:
+      - 8085:8085
+    depends_on:
+      - postgres
+      - dictionaryapi
+  dictionaryapi:
+    image: azizmavlyanov/dictionary-server
+    restart: on-failure
+    ports:
+      - 8082:8082
+
