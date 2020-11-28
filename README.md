@@ -4,7 +4,7 @@
 Aziz Mavlyanov
 
 ## Stack
-HTML, Mustache, CSS, JavaScript, Java, Spring Boot, MongoDB, Docker
+HTML, Mustache, CSS, JavaScript, Java, Spring Boot, PostgreSQL, Docker
 
 ## Installation and usage of the project
 **Please make sure that you have docker installed on your PC (Notebook)**
